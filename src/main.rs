@@ -12,7 +12,7 @@ fn print_usage(program: &String) {
     println!("  off                      Turn Night Shift off (until scheduled start)");
     println!("  status                   View current on/off status");
     println!("  toggle                   Toggle on or off based on current status");
-    println!("  <none>                 Toggle on or off based on current status");
+    println!("  <noargs>                 Toggle on or off based on current status");
     println!("\ncolor temperature:");
     println!("  temp                     View temperature preference");
     println!("  temp <0-100|3500K-6500K> Set temperature preference (does not affect on/off)");
