@@ -62,7 +62,7 @@ Toggle on or off based on current status:
 
 ```
 nightlight toggle
-nightlight <noargs>
+nightlight <none>
 ```
 
 #### Controlling the Temperature:
