@@ -52,7 +52,9 @@ fn main() {
     let args: Vec<String> = args().collect();
 
     let client = NightLight::new();
-    if args.len() == 2 && args[1] == "on" {
+    if args.len() == 1 {
+        toggle(client).unwrap_or_else(|e| error(e));
+    } else if args.len() == 2 && args[1] == "on" {
         client.on().unwrap_or_else(|e| error(e));
     } else if args.len() == 2 && args[1] == "off" {
         client.off().unwrap_or_else(|e| error(e));
@@ -86,7 +88,7 @@ fn main() {
     } else if args.len() == 2 && args[1] == "help" {
         print_usage(&args[0]);
     } else {
-        toggle(client).unwrap_or_else(|e| error(e));
+        print_usage(&args[0]);
     }
 }
 
